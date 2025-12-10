@@ -1,0 +1,46 @@
+/* Печать: убираем навигацию, фон, тени, делаем текст читабельным */
+
+
+
+body {
+
+    background: #fff !important;
+
+    color: #000 !important;
+
+    font-size: 12pt;
+
+}
+
+
+
+.site-header,
+
+.main-nav,
+
+.site-footer,
+
+.feedback-form,
+
+.about-image,
+
+.sticky-checkout {
+
+    display: none !important;
+
+}
+
+
+
+.section {
+
+    box-shadow: none !important;
+
+    background: #fff !important;
+
+    padding: 0;
+
+    margin-bottom: 10px;
+
+}
+
