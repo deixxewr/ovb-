@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Лендинг – Отдых с Политехом</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Шрифт -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Стили -->
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+        .hero {
+            padding: 60px 0;
+            background: linear-gradient(135deg, #fff0e9, #ffe9de);
+            margin-bottom: 30px;
+        }
+
+        .hero-content {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .hero-text {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .hero-text h1 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #222;
+        }
+
+        .hero-text p {
+            font-size: 18px;
+            margin-bottom: 25px;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .hero-image {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+        }
+
+        .hero-img {
+            max-width: 100%;
+            width: 100%;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            display: block;
+        }
+
+        .cta-section {
+            padding: 50px 0;
+            background-color: #fff7f3;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .benefit-card {
+            padding: 25px;
+            background-color: #fff;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+            border: 1px solid #eee;
+        }
+
+        .benefit-card h3 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #222;
+        }
+
+        .benefit-card p {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .contacts-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        @media (max-width: 800px) {
+            .hero-content {
+                flex-direction: column;
+            }
+
+            .hero-text h1 {
+                font-size: 28px;
+            }
+
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contacts-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page-wrapper">
+    <header class="site-header">
+        <div class="container header-inner">
+            <h1 class="logo">Туристическое агентство «Отдых с Политехом»</h1>
+            <nav class="main-nav">
+                <a href="index.html" class="nav-link">Главная</a>
+                <a href="tours.html" class="nav-link">Подбор тура</a>
+                <a href="checkout.html" class="nav-link">Оформить заказ</a>
+                <a href="orders.html" class="nav-link">Заказы</a>
+                <a href="index.html#contacts" class="nav-link">Контакты</a>
+                <a href="auth.html" class="nav-link">Вход</a>
+                <a href="landing.html" class="nav-link active">Лендинг</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="site-main container">
+        <!-- Hero секция -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1>Путешествуй с Политехом: туры для студентов и преподавателей</h1>
+                        <p>
+                            Готовые маршруты, студенческие цены и выезды в кампусы партнёрских вузов.
+                            Планируй поездку, не отвлекаясь от учёбы.
+                        </p>
+                        <a href="tours.html" class="btn-primary">Собрать тур</a>
+                    </div>
+                    <div class="hero-image">
+                        <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800&h=600&fit=crop" alt="Студенты в путешествии" class="hero-img">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Преимущества -->
+        <section class="section" id="benefits">
+            <h2>Наши преимущества</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <h3>Маршруты под расписание</h3>
+                    <p>Туры на выходные и в каникулы: не пропустишь пары и лабораторные.</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>Студенческие цены</h3>
+                    <p>Коллективные выезды и специальные условия от партнёров Политеха.</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>Образовательные туры</h3>
+                    <p>Посещение кампусов, лабораторий и предприятий по профилю обучения.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA секция -->
+        <section class="cta-section">
+            <div class="container">
+                <h2 style="font-size: 24px; margin-bottom: 15px;">Готов начать путешествие?</h2>
+                <p style="font-size: 16px; margin-bottom: 25px; color: #666;">Собери свой тур онлайн за пару минут и получи консультацию куратора.</p>
+                <a href="tours.html" class="btn-primary">Перейти к подбору тура</a>
+            </div>
+        </section>
+
+        <!-- Контакты -->
+        <section class="section" id="contacts">
+            <h2>Связаться с нами</h2>
+            <div class="contacts-grid">
+                <div>
+                    <form action="https://httpbin.org/post" method="post" class="feedback-form">
+                        <div class="form-row">
+                            <label for="cnt-name">ФИО</label>
+                            <input type="text" id="cnt-name" name="full_name" required>
+                        </div>
+                        <div class="form-row">
+                            <label for="cnt-email">Email</label>
+                            <input type="email" id="cnt-email" name="email" required>
+                        </div>
+                        <div class="form-row">
+                            <label for="cnt-message">Сообщение</label>
+                            <textarea id="cnt-message" name="message" rows="3"></textarea>
+                        </div>
+                        <div class="form-row form-row--checkbox">
+                            <label>
+                                <input type="checkbox" id="cnt-agree" required>
+                                Согласен на обработку персональных данных
+                            </label>
+                        </div>
+                        <button type="submit" class="btn-primary">Отправить</button>
+                    </form>
+                </div>
+                <div>
+                    <h3 style="font-size: 18px; margin-bottom: 15px;">Контакты</h3>
+                    <p style="margin-bottom: 10px;"><b>Адрес:</b> Москва, Большая Семёновская, 38</p>
+                    <p style="margin-bottom: 10px;"><b>Телефон:</b> <a href="tel:+74951234567">+7 (495) 123-45-67</a></p>
+                    <p style="margin-bottom: 10px;"><b>Email:</b> <a href="mailto:travel@polytech.ru">travel@polytech.ru</a></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>© 2025, «Отдых с Политехом»</p>
+            <p>
+                Тел.: <a href="tel:+74951234567">+7 (495) 123-45-67</a>,
+                Email: <a href="mailto:travel@polytech.ru">travel@polytech.ru</a>
+            </p>
+            <p>Адрес офиса: Москва, Большая Семёновская, 38</p>
+        </div>
+    </footer>
+</div>
+</body>
+</html>

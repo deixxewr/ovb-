@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Оформление заказа – Отдых с Политехом</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/tours.css">
+</head>
+<body>
+<div class="page-wrapper">
+    <header class="site-header">
+        <div class="container header-inner">
+            <h1 class="logo">Оформление заказа</h1>
+            <nav class="main-nav">
+                <a href="index.html" class="nav-link">Главная</a>
+                <a href="tours.html" class="nav-link">Подбор тура</a>
+                <a href="checkout.html" class="nav-link active">Оформить заказ</a>
+                <a href="orders.html" class="nav-link">Заказы</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="site-main container">
+        <div class="checkout-layout">
+            <section class="section checkout-selected">
+                <h2>Состав заказа</h2>
+                <div id="checkout-empty">
+                    Ничего не выбрано. Чтобы добавить туры в заказ, перейдите на страницу
+                    <a href="tours.html">Подбор тура</a>.
+                </div>
+                <div id="checkout-cards" class="dishes-grid"></div>
+            </section>
+
+            <section class="section checkout-form">
+                <h2>Оформление заказа</h2>
+                <form id="order-form">
+                    <div class="form-row">
+                        <label>Основной тур</label>
+                        <span id="summary-main">Не выбран</span>
+                    </div>
+                    <div class="form-row">
+                        <label>Короткий тур</label>
+                        <span id="summary-starter">Не выбран</span>
+                    </div>
+                    <div class="form-row">
+                        <label>Транспорт</label>
+                        <span id="summary-drink">Не выбран</span>
+                    </div>
+                    <div class="form-row">
+                        <label>Доп. услуги</label>
+                        <span id="summary-dessert">Не выбрано</span>
+                    </div>
+
+                    <div class="form-row">
+                        <label>Итоговая стоимость</label>
+                        <span id="summary-total">0 ₽</span>
+                    </div>
+
+                    <hr style="margin: 15px 0;">
+
+                    <!-- Данные клиента -->
+                    <div class="form-row">
+                        <label for="full_name_checkout">ФИО</label>
+                        <input id="full_name_checkout" name="full_name" required>
+                    </div>
+                    <div class="form-row">
+                        <label for="email_checkout">Email</label>
+                        <input type="email" id="email_checkout" name="email" required>
+                    </div>
+                    <div class="form-row">
+                        <label for="phone_checkout">Телефон</label>
+                        <input id="phone_checkout" name="phone" required>
+                    </div>
+                    <div class="form-row">
+                        <label for="address_checkout">Адрес доставки документов</label>
+                        <input id="address_checkout" name="delivery_address">
+                    </div>
+                    <div class="form-row">
+                        <label for="delivery_type">Тип оформления</label>
+                        <select id="delivery_type" name="delivery_type">
+                            <option value="office">В офисе</option>
+                            <option value="courier">Курьером</option>
+                            <option value="email">Электронные документы</option>
+                        </select>
+                    </div>
+                    <div class="form-row">
+                        <label for="delivery_time">Желаемое время</label>
+                        <input type="time" id="delivery_time" name="delivery_time">
+                    </div>
+                    <div class="form-row">
+                        <label for="comment_checkout">Комментарий</label>
+                        <textarea id="comment_checkout" name="comment" rows="3"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-primary">Отправить</button>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>© 2025, «Отдых с Политехом»</p>
+        </div>
+    </footer>
+</div>
+
+<!-- Модальное окно уведомления (ЛР6) -->
+<div id="combo-modal" class="combo-modal" hidden>
+    <div class="combo-modal__inner">
+        <button type="button" class="combo-modal__close">&times;</button>
+        <h3 id="combo-modal-title">Не хватает элементов тура</h3>
+        <p id="combo-modal-text">
+            Проверьте, чтобы в заказе были выбраны все необходимые части тура.
+        </p>
+        <button type="button" class="combo-modal__ok">Окей</button>
+    </div>
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/storage.js"></script>
+<script src="js/api.js"></script>
+<script src="js/order.js"></script>
+<script src="js/checkout.js"></script>
+</body>
+</html>
+
