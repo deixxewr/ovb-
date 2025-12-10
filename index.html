@@ -1,109 +1,167 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Турагентство «Отдых с Политехом»</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <title>Отдых с Политехом – Туристическое агентство</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Стили -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/print.css" media="print">
 </head>
 <body>
-  <header class="header">
-    <div class="container header__row">
-      <a class="logo" href="#">Отдых с Политехом</a>
-      <nav class="nav" aria-label="Основная навигация">
-        <ul class="nav__list">
-          <li><a href="#about">О нас</a></li>
-          <li><a href="#tours">Туры</a></li>
-          <li><a href="#gallery">Галерея</a></li>
-          <li><a href="#contacts">Контакты</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <section class="hero" id="about">
-      <div class="container hero__grid">
-        <div class="hero__content">
-          <h1>Откройте мир вместе с нами</h1>
-          <p>Подберём идеальный отдых: пляжи, города, горные тропы и авторские маршруты. Работаем по всему миру и бережём ваш бюджет.</p>
-          <a href="#tours" class="btn">Подобрать тур</a>
+<div class="page-wrapper">
+    <header class="site-header">
+        <div class="container header-inner">
+            <h1 class="logo">Туристическое агентство «Отдых с Политехом»</h1>
+            <nav class="main-nav">
+                <a href="index.html" class="nav-link active">Главная</a>
+                <a href="tours.html" class="nav-link">Подбор тура</a>
+                <a href="checkout.html" class="nav-link">Оформить заказ</a>
+                <a href="orders.html" class="nav-link">Заказы</a>
+                <a href="#contacts" class="nav-link">Контакты</a>
+                <a href="auth.html" class="nav-link">Вход</a>
+                <a href="landing.html" class="nav-link">Лендинг</a>
+            </nav>
         </div>
-        <figure class="hero__image">
-          <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1400&auto=format&fit=crop" alt="Море и пляж на закате">
-          <figcaption>Ваш отпуск начинается здесь</figcaption>
-        </figure>
-      </div>
-    </section>
+    </header>
 
-    <section id="tours" class="section">
-      <div class="container">
-        <h2>Популярные туры</h2>
-        <table class="table">
-          <thead>
-            <tr>
-              <th>Направление</th>
-              <th>Длительность</th>
-              <th>Даты</th>
-              <th>Цена</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Турция, Анталья</td>
-              <td>7 ночей</td>
-              <td>15.06 — 30.09</td>
-              <td>от 65 000 ₽</td>
-            </tr>
-            <tr>
-              <td>ОАЭ, Дубай</td>
-              <td>5 ночей</td>
-              <td>круглый год</td>
-              <td>от 80 000 ₽</td>
-            </tr>
-            <tr>
-              <td>Египет, Хургада</td>
-              <td>7 ночей</td>
-              <td>01.10 — 30.04</td>
-              <td>от 70 000 ₽</td>
-            </tr>
-            <tr>
-              <td>Россия, Камчатка</td>
-              <td>10 ночей</td>
-              <td>июль — сентябрь</td>
-              <td>от 120 000 ₽</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
+    <main class="site-main container">
+        <!-- О компании -->
+        <section class="section about">
+            <h2>О нас</h2>
+            <div class="about-content">
+                <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?q=80&w=600&auto=format&fit=crop" alt="Путешествия с Политехом" class="about-image">
+                <p>
+                    «Отдых с Политехом» – студенческое туристическое агентство, которое помогает студентам и
+                    преподавателям Московского Политеха организовать путешествия по России и за рубеж:
+                    от коротких уикендов до больших образовательных туров.
+                </p>
+            </div>
+        </section>
 
-    <section id="gallery" class="section section--alt">
-      <div class="container gallery">
-        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1200&auto=format&fit=crop" alt="Горный пейзаж">
-        <img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?q=80&w=1200&auto=format&fit=crop" alt="Ночной город">
-        <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?q=80&w=1200&auto=format&fit=crop" alt="Песчаный пляж">
-      </div>
-    </section>
+        <!-- Преимущества -->
+        <section class="section benefits">
+            <h2>Почему стоит путешествовать с нами</h2>
+            <ul>
+                <li>Маршруты, адаптированные под учебный график и сессии.</li>
+                <li>Специальные студенческие цены и рассрочка.</li>
+                <li>Образовательные экскурсии и выезды на предприятия-партнёры Политеха.</li>
+            </ul>
+        </section>
 
-    <section id="contacts" class="section">
-      <div class="container">
-        <h2>Контакты</h2>
-        <p>Позвоните: <a href="tel+74952230523">+7 (495) 223-05-23</a></p>
-        <p>Пишите: <a href="mailto:politextravel@mail.ru">politextravel@mail.ru</a></p>
-        <p>Адрес: г. Москва, ул. Большая Семёновская, 38</p>
-      </div>
-    </section>
-  </main>
+        <!-- Популярные туры (таблица) -->
+        <section class="section popular-tours">
+            <h2>Самые популярные туры</h2>
+            <table class="tours-table">
+                <thead>
+                <tr>
+                    <th>Название тура</th>
+                    <th>Направление</th>
+                    <th>Длительность</th>
+                    <th>Стоимость, ₽</th>
+                    <th>Статус</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td data-label="Название тура">Выходные в Санкт-Петербурге</td>
+                    <td data-label="Направление">Россия</td>
+                    <td data-label="Длительность">3 дня / 2 ночи</td>
+                    <td data-label="Стоимость, ₽">18 500</td>
+                    <td data-label="Статус">Хит сезона</td>
+                </tr>
+                <tr>
+                    <td data-label="Название тура">Золотое кольцо России</td>
+                    <td data-label="Направление">Россия</td>
+                    <td data-label="Длительность">5 дней / 4 ночи</td>
+                    <td data-label="Стоимость, ₽">32 900</td>
+                    <td data-label="Статус">Классический маршрут</td>
+                </tr>
+                <tr>
+                    <td data-label="Название тура">Студенческий Берлин</td>
+                    <td data-label="Направление">Германия</td>
+                    <td data-label="Длительность">4 дня / 3 ночи</td>
+                    <td data-label="Стоимость, ₽">44 000</td>
+                    <td data-label="Статус">С экскурсиями по вузам</td>
+                </tr>
+                <tr>
+                    <td data-label="Название тура">Горные выходные на Эльбрусе</td>
+                    <td data-label="Направление">Кавказ</td>
+                    <td data-label="Длительность">4 дня / 3 ночи</td>
+                    <td data-label="Стоимость, ₽">27 500</td>
+                    <td data-label="Статус">Для активных</td>
+                </tr>
+                <tr>
+                    <td data-label="Название тура">Сочи: море, горы, кампус</td>
+                    <td data-label="Направление">Россия</td>
+                    <td data-label="Длительность">5 дней / 4 ночи</td>
+                    <td data-label="Стоимость, ₽">36 000</td>
+                    <td data-label="Статус">Летний интенсив</td>
+                </tr>
+                </tbody>
+            </table>
+        </section>
 
-  <footer class="footer">
-    <div class="container footer__row">
-      <p>© 2025 Турагентство «Отдых с Политехом». Все права защищены.</p>
-      <p>Мы в соцсетях: <a href="#" aria-label="VK">VK</a> · <a href="#" aria-label="Telegram">Telegram</a> · <a href="#" aria-label="YouTube">YouTube</a></p>
-    </div>
-  </footer>
+        <!-- Форма обратной связи -->
+        <section class="section feedback" id="contacts">
+            <h2>Обратная связь</h2>
+            <form action="https://httpbin.org/post" method="post" class="feedback-form">
+                <div class="form-row">
+                    <label for="full_name">ФИО</label>
+                    <input type="text" id="full_name" name="full_name" required>
+                </div>
+                <div class="form-row">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <fieldset class="form-row">
+                    <legend>Откуда вы узнали о нас?</legend>
+                    <label><input type="radio" name="source" value="friends" checked> От друзей</label>
+                    <label><input type="radio" name="source" value="social"> Соцсети</label>
+                    <label><input type="radio" name="source" value="polytech"> В Политехе</label>
+                </fieldset>
+                <div class="form-row">
+                    <label for="type">Тип обращения</label>
+                    <select id="type" name="type">
+                        <option value="proposal">Предложение по туру</option>
+                        <option value="complaint">Жалоба</option>
+                        <option value="question">Вопрос</option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <label for="message">Текст сообщения</label>
+                    <textarea id="message" name="message" rows="4"></textarea>
+                </div>
+                <div class="form-row">
+                    <label for="attachment">Вложения</label>
+                    <input type="file" id="attachment" name="attachment">
+                </div>
+                <div class="form-row form-row--checkbox">
+                    <label>
+                        <input type="checkbox" name="agreement" required>
+                        Даю согласие на обработку персональных данных
+                    </label>
+                </div>
+                <button type="submit" class="btn-primary">Отправить</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>© 2025, «Отдых с Политехом»</p>
+            <p>
+                Тел.: <a href="tel:+74951234567">+7 (495) 123-45-67</a>,
+                Email: <a href="mailto:travel@polytech.ru">travel@polytech.ru</a>
+            </p>
+            <p>Адрес офиса: Москва, Большая Семёновская, 38</p>
+        </div>
+    </footer>
+</div>
 </body>
-</html> 
+</html>
