@@ -1,214 +1,53 @@
 <!DOCTYPE html>
-
 <html lang="ru">
-
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LunchTime – Доставка бизнес-ланчей</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
 
-    <meta charset="UTF-8">
-
-    <title>Заказы – Отдых с Политехом</title>
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
-
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="css/main.css">
-
+    <link rel="stylesheet" href="css/lunch.css">
 </head>
-
-<body>
-
-<div class="page-wrapper">
-
-    <header class="site-header">
-
-        <div class="container header-inner">
-
-            <h1 class="logo">История заказов</h1>
-
-            <nav class="main-nav">
-
-                <a href="index.html" class="nav-link">Главная</a>
-
-                <a href="tours.html" class="nav-link">Подбор тура</a>
-
-                <a href="checkout.html" class="nav-link">Оформить заказ</a>
-
-                <a href="orders.html" class="nav-link active">Заказы</a>
-
-            </nav>
-
-        </div>
-
-    </header>
-
-
-
-    <main class="site-main container">
-
-        <section class="section">
-
-            <h2>Ваши заказы</h2>
-
-            <div id="orders-list"></div>
-
-        </section>
-
-    </main>
-
-
-
-    <footer class="site-footer">
-
-        <div class="container footer-inner">
-
-            <p>© 2025, «Отдых с Политехом»</p>
-
-        </div>
-
-    </footer>
-
-</div>
-
-
-
-<!-- Модалки: подробнее, редактирование, удаление -->
-
-<div id="order-modal" class="combo-modal" hidden>
-
-    <div class="combo-modal__inner">
-
-        <button type="button" class="combo-modal__close">&times;</button>
-
-        <h3>Информация о заказе</h3>
-
-        <div id="order-modal-content"></div>
-
-        <button type="button" class="combo-modal__ok">Ок</button>
-
+<body class="page page-orders" data-page="orders">
+<header class="site-header">
+    <div class="container header-inner">
+        <h1 class="logo">LunchTime</h1>
+        <nav class="main-nav">
+            <a href="index.html" class="nav-link">Главная</a>
+            <a href="collect-lunch.html" class="nav-link">Собрать ланч</a>
+            <a href="checkout.html" class="nav-link">Оформить заказ</a>
+            <a href="orders.html" class="nav-link active">Заказы</a>
+            <a href="landing.html" class="nav-link">Лендинг</a>
+        </nav>
     </div>
+</header>
 
-</div>
-
-
-
-<div id="order-edit-modal" class="combo-modal" hidden>
-
-    <div class="combo-modal__inner">
-
-        <button type="button" class="combo-modal__close">&times;</button>
-
-        <h3>Редактирование заказа</h3>
-
-        <form id="order-edit-form">
-
-            <input type="hidden" name="id" id="edit-id">
-
-            <div class="form-row">
-
-                <label for="edit-full_name">ФИО</label>
-
-                <input id="edit-full_name" name="full_name">
-
-            </div>
-
-            <div class="form-row">
-
-                <label for="edit-email">Email</label>
-
-                <input id="edit-email" name="email">
-
-            </div>
-
-            <div class="form-row">
-
-                <label for="edit-phone">Телефон</label>
-
-                <input id="edit-phone" name="phone">
-
-            </div>
-
-            <div class="form-row">
-
-                <label for="edit-address">Адрес доставки</label>
-
-                <input id="edit-address" name="delivery_address">
-
-            </div>
-
-            <div class="form-row">
-
-                <label for="edit-type">Тип доставки</label>
-
-                <select id="edit-type" name="delivery_type">
-
-                    <option value="office">В офис</option>
-
-                    <option value="courier">Курьер</option>
-
-                    <option value="email">Электронно</option>
-
-                </select>
-
-            </div>
-
-            <div class="form-row">
-
-                <label for="edit-time">Время доставки</label>
-
-                <input id="edit-time" name="delivery_time" type="time">
-
-            </div>
-
-            <div class="form-row">
-
-                <label for="edit-comment">Комментарий</label>
-
-                <textarea id="edit-comment" name="comment" rows="3"></textarea>
-
-            </div>
-
-            <button type="submit" class="btn-primary">Сохранить</button>
-
-        </form>
-
+<main class="main container">
+    <h2>История заказов</h2>
+    <div id="orders-container" class="orders-container">
+        <p id="orders-empty">Заказов пока нет.</p>
     </div>
+</main>
 
-</div>
-
-
-
-<div id="order-delete-modal" class="combo-modal" hidden>
-
-    <div class="combo-modal__inner">
-
-        <button type="button" class="combo-modal__close">&times;</button>
-
-        <h3>Удалить заказ?</h3>
-
-        <p>Вы действительно хотите удалить заказ?</p>
-
-        <div style="margin-top: 10px; display: flex; gap: 10px; justify-content: center;">
-
-            <button type="button" class="btn-primary" id="delete-confirm">Да</button>
-
-            <button type="button" class="combo-modal__ok">Отмена</button>
-
-        </div>
-
+<div class="modal-overlay" id="orders-modal" hidden>
+    <div class="modal modal-large">
+        <button type="button" class="modal-close" id="orders-modal-close">×</button>
+        <h3 id="orders-modal-title"></h3>
+        <div id="orders-modal-body"></div>
+        <div class="modal-actions" id="orders-modal-actions"></div>
     </div>
-
 </div>
 
+<footer class="site-footer">
+    <div class="container footer-inner">
+        <p>© 2025 LunchTime</p>
+    </div>
+</footer>
 
-
-<script src="js/api.js"></script>
-
-<script src="js/ordersPage.js"></script>
-
+<script src="js/config.js"></script>
+<script src="js/orders.js"></script>
 </body>
-
 </html>
-
