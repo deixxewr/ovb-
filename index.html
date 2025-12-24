@@ -1,167 +1,135 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <title>Отдых с Политехом – Туристическое агентство</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LunchTime – Доставка бизнес-ланчей</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-    <!-- Стили -->
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/print.css" media="print">
+    <link rel="stylesheet" href="css/lunch.css">
 </head>
-<body>
-<div class="page-wrapper">
-    <header class="site-header">
-        <div class="container header-inner">
-            <h1 class="logo">Туристическое агентство «Отдых с Политехом»</h1>
-            <nav class="main-nav">
-                <a href="index.html" class="nav-link active">Главная</a>
-                <a href="tours.html" class="nav-link">Подбор тура</a>
-                <a href="checkout.html" class="nav-link">Оформить заказ</a>
-                <a href="orders.html" class="nav-link">Заказы</a>
-                <a href="#contacts" class="nav-link">Контакты</a>
-                <a href="auth.html" class="nav-link">Вход</a>
-                <a href="landing.html" class="nav-link">Лендинг</a>
-            </nav>
+<body class="page page-main">
+<header class="site-header">
+    <div class="container header-inner">
+        <h1 class="logo">LunchTime</h1>
+        <nav class="main-nav">
+            <a href="index.html" class="nav-link active">Главная</a>
+            <a href="collect-lunch.html" class="nav-link">Собрать ланч</a>
+            <a href="checkout.html" class="nav-link">Оформить заказ</a>
+            <a href="orders.html" class="nav-link">Заказы</a>
+            <a href="#contacts" class="nav-link">Контакты</a>
+            <a href="feedback.html" class="nav-link">Обратная связь</a>
+            <a href="landing.html" class="nav-link">Лендинг</a>
+        </nav>
+    </div>
+</header>
+
+<main class="main container">
+    <section class="about" id="about">
+        <h2>О компании</h2>
+        <div class="about-inner">
+            <img id="about-image" src="" alt="Бизнес-ланч в офисе" class="about-image">
+            <p>
+                LunchTime — служба доставки бизнес-ланчей в Москве. Мы готовим свежие блюда каждый день,
+                собираем сбалансированные комплексы и привозим их вовремя прямо в ваш офис.
+                Выберите суп, главное блюдо, салат или стартер, напиток и десерт — и соберите идеальный ланч.
+            </p>
         </div>
-    </header>
+    </section>
 
-    <main class="site-main container">
-        <!-- О компании -->
-        <section class="section about">
-            <h2>О нас</h2>
-            <div class="about-content">
-                <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?q=80&w=600&auto=format&fit=crop" alt="Путешествия с Политехом" class="about-image">
-                <p>
-                    «Отдых с Политехом» – студенческое туристическое агентство, которое помогает студентам и
-                    преподавателям Московского Политеха организовать путешествия по России и за рубеж:
-                    от коротких уикендов до больших образовательных туров.
-                </p>
-            </div>
-        </section>
+    <section class="benefits">
+        <h2>Почему выбирают нас</h2>
+        <ul class="benefits-list">
+            <li>Доставка по Москве от 45 минут</li>
+            <li>Меню на каждый день с сезонными блюдами</li>
+            <li>Корпоративные условия и безналичная оплата</li>
+        </ul>
+    </section>
 
-        <!-- Преимущества -->
-        <section class="section benefits">
-            <h2>Почему стоит путешествовать с нами</h2>
-            <ul>
-                <li>Маршруты, адаптированные под учебный график и сессии.</li>
-                <li>Специальные студенческие цены и рассрочка.</li>
-                <li>Образовательные экскурсии и выезды на предприятия-партнёры Политеха.</li>
-            </ul>
-        </section>
-
-        <!-- Популярные туры (таблица) -->
-        <section class="section popular-tours">
-            <h2>Самые популярные туры</h2>
-            <table class="tours-table">
+    <section class="popular">
+        <h2>Популярные блюда</h2>
+        <div class="table-wrapper">
+            <table class="dishes-table">
                 <thead>
-                <tr>
-                    <th>Название тура</th>
-                    <th>Направление</th>
-                    <th>Длительность</th>
-                    <th>Стоимость, ₽</th>
-                    <th>Статус</th>
-                </tr>
+                    <tr>
+                        <th>Блюдо</th>
+                        <th>Категория</th>
+                        <th>Вес</th>
+                        <th>Цена, ₽</th>
+                    </tr>
                 </thead>
                 <tbody>
-                <tr>
-                    <td data-label="Название тура">Выходные в Санкт-Петербурге</td>
-                    <td data-label="Направление">Россия</td>
-                    <td data-label="Длительность">3 дня / 2 ночи</td>
-                    <td data-label="Стоимость, ₽">18 500</td>
-                    <td data-label="Статус">Хит сезона</td>
-                </tr>
-                <tr>
-                    <td data-label="Название тура">Золотое кольцо России</td>
-                    <td data-label="Направление">Россия</td>
-                    <td data-label="Длительность">5 дней / 4 ночи</td>
-                    <td data-label="Стоимость, ₽">32 900</td>
-                    <td data-label="Статус">Классический маршрут</td>
-                </tr>
-                <tr>
-                    <td data-label="Название тура">Студенческий Берлин</td>
-                    <td data-label="Направление">Германия</td>
-                    <td data-label="Длительность">4 дня / 3 ночи</td>
-                    <td data-label="Стоимость, ₽">44 000</td>
-                    <td data-label="Статус">С экскурсиями по вузам</td>
-                </tr>
-                <tr>
-                    <td data-label="Название тура">Горные выходные на Эльбрусе</td>
-                    <td data-label="Направление">Кавказ</td>
-                    <td data-label="Длительность">4 дня / 3 ночи</td>
-                    <td data-label="Стоимость, ₽">27 500</td>
-                    <td data-label="Статус">Для активных</td>
-                </tr>
-                <tr>
-                    <td data-label="Название тура">Сочи: море, горы, кампус</td>
-                    <td data-label="Направление">Россия</td>
-                    <td data-label="Длительность">5 дней / 4 ночи</td>
-                    <td data-label="Стоимость, ₽">36 000</td>
-                    <td data-label="Статус">Летний интенсив</td>
-                </tr>
+                    <tr>
+                        <td>Гаспачо</td>
+                        <td>Суп</td>
+                        <td>350 г</td>
+                        <td>195</td>
+                    </tr>
+                    <tr>
+                        <td>Куриное филе с овощами-гриль</td>
+                        <td>Главное блюдо</td>
+                        <td>320 г</td>
+                        <td>290</td>
+                    </tr>
+                    <tr>
+                        <td>Салат «Греческий»</td>
+                        <td>Салат</td>
+                        <td>220 г</td>
+                        <td>210</td>
+                    </tr>
+                    <tr>
+                        <td>Домашний лимонад</td>
+                        <td>Напиток</td>
+                        <td>400 мл</td>
+                        <td>140</td>
+                    </tr>
+                    <tr>
+                        <td>Чизкейк ванильный</td>
+                        <td>Десерт</td>
+                        <td>120 г</td>
+                        <td>220</td>
+                    </tr>
                 </tbody>
             </table>
-        </section>
-
-        <!-- Форма обратной связи -->
-        <section class="section feedback" id="contacts">
-            <h2>Обратная связь</h2>
-            <form action="https://httpbin.org/post" method="post" class="feedback-form">
-                <div class="form-row">
-                    <label for="full_name">ФИО</label>
-                    <input type="text" id="full_name" name="full_name" required>
-                </div>
-                <div class="form-row">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <fieldset class="form-row">
-                    <legend>Откуда вы узнали о нас?</legend>
-                    <label><input type="radio" name="source" value="friends" checked> От друзей</label>
-                    <label><input type="radio" name="source" value="social"> Соцсети</label>
-                    <label><input type="radio" name="source" value="polytech"> В Политехе</label>
-                </fieldset>
-                <div class="form-row">
-                    <label for="type">Тип обращения</label>
-                    <select id="type" name="type">
-                        <option value="proposal">Предложение по туру</option>
-                        <option value="complaint">Жалоба</option>
-                        <option value="question">Вопрос</option>
-                    </select>
-                </div>
-                <div class="form-row">
-                    <label for="message">Текст сообщения</label>
-                    <textarea id="message" name="message" rows="4"></textarea>
-                </div>
-                <div class="form-row">
-                    <label for="attachment">Вложения</label>
-                    <input type="file" id="attachment" name="attachment">
-                </div>
-                <div class="form-row form-row--checkbox">
-                    <label>
-                        <input type="checkbox" name="agreement" required>
-                        Даю согласие на обработку персональных данных
-                    </label>
-                </div>
-                <button type="submit" class="btn-primary">Отправить</button>
-            </form>
-        </section>
-    </main>
-
-    <footer class="site-footer">
-        <div class="container footer-inner">
-            <p>© 2025, «Отдых с Политехом»</p>
-            <p>
-                Тел.: <a href="tel:+74951234567">+7 (495) 123-45-67</a>,
-                Email: <a href="mailto:travel@polytech.ru">travel@polytech.ru</a>
-            </p>
-            <p>Адрес офиса: Москва, Большая Семёновская, 38</p>
         </div>
-    </footer>
-</div>
+    </section>
+</main>
+
+<footer class="site-footer" id="contacts">
+    <div class="container footer-inner">
+        <p>Телефон: <a href="tel:+74951234567">+7 (495) 123-45-67</a></p>
+        <p>Email: <a href="mailto:info@lunchtime.ru">info@lunchtime.ru</a></p>
+        <p>© 2025 LunchTime, доставка бизнес-ланчей в Москве</p>
+    </div>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/dishes-api.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", async () => {
+  try {
+    const dishes = await loadDishes();
+    // Ищем главное блюдо или суп для изображения
+    const mainDish = dishes.find(d => d.category === "main") || dishes.find(d => d.category === "soup") || dishes[0];
+    if (mainDish && mainDish.image) {
+      const img = document.getElementById("about-image");
+      if (img) {
+        img.src = mainDish.image;
+        img.alt = mainDish.name || "Бизнес-ланч в офисе";
+      }
+    }
+  } catch (error) {
+    console.error("Ошибка загрузки изображения из API:", error);
+    // Fallback на локальное изображение
+    const img = document.getElementById("about-image");
+    if (img) {
+      img.src = "images/main1.jpg";
+    }
+  }
+});
+</script>
 </body>
 </html>
